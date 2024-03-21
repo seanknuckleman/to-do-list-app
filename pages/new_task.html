@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create New Task</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icon.png">
+</head>
+
+<body onload="load_group_name()">
+<header>
+  <h1><a href="../index.html">To-Do List</a></h1>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="new_group.html">Create New Group</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="heading-container">
+    <label for="group-name" class="heading">Part of Group: </label>
+    <input id="group-name" class="heading-name" type="text" value="asdf">
+  </div>
+
+  <div class="content-container">
+    <div class="content-body">
+      <form id="newTask" action="../index.html" method="get">
+        <label for="task-content" id="new-task-label">New Thing To Do: </label>
+        <input id="task-content" name="task-content" type="text" size="50" placeholder="Enter text here...">
+      </form>
+    </div>
+
+    <button class="save-btn" type="submit" form="newTask" onclick="set_task()">Save</button>
+<!--    <button onclick="clear_all()">CLEAR LOCAL STORAGE</button>-->
+  </div>
+</main>
+
+<footer>
+  <p id="footer_here"></p>
+</footer>
+
+<script src="../js/storage.js"></script>
+
+</body>
+</html>

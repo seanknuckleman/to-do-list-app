@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icon.png">
+</head>
+
+<body onload="set_date()">
+<header>
+  <h1><a href="../index.html">To-Do List</a></h1>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="new_group.html">Create New Group</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="heading-container">
+    <span class="heading">About This To-Do-List</span>
+  </div>
+
+  <div class="content-container">
+    <div class="content-body about-body">
+      <h2>Application Overview</h2>
+      <p class="about-txt">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            This is a to-do-list application that allows site visitors to create new groups,
+        add new tasks to those groups, edit existing groups, edit existing tasks,
+        mark tasks as complete, delete their tasks, and delete groups.
+        There are no accounts, no service logins and no software to download.
+        The data entered lives only on the device from which it is created.
+        <br><br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            There are six pages to the entire site
+        (index.html, new_group.html, new_task.html, edit_group.html, edit_task.html and about.html),
+        a single style sheet: style.css, and one main JavaScript file to control app functions: storage.js.
+        <br><br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            The site features seven buttons (Create a New Task – append a task to that group),
+        (Edit Grouping – edit the group), (Delete Grouping – delete the grouping with all of its tasks),
+        (Edit Task – edit the task), (Complete Task – mark the task as complete),
+        (Delete Task – deletes the task from the grouping) and (Save - save the task or group just created).
+        The quantity (total number) of groups that can be created, and the length of each task created
+        are limited by the storage capacity of the browser’s implementation of the HTML-5 localStorage standard.
+        This means that some users will have larger storage areas than others, and the exact size of storage is subject to change over time.
+        Typical local storage area is from 2 – 10 MB with 5 MB being average. (Maybe…)
+      </p>
+
+      <hr>
+
+      <h2>Privacy Policy</h2>
+      <p class="about-txt">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            This to-do-list application does not save any information into the cloud (or online),
+        but instead uses your local browser (like Firefox or Chrome) via HTML5 localStorage to save notes for later retrieval.
+        <br><br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            The benefit is that your information remains private to your device, and is never harvested,
+        collected, shared or sold with any party anywhere in person or virtually.
+
+        <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            The shortcoming is that (in its current configuration) your information is only available to you
+        inside of the browser you created your data in, and it does not go from one browser to another,
+        or from one laptop/phone you use to another. In addition, if your browser or device fails,
+        there is no possibility of remote data recovery or retrieval.
+      </p>
+
+      <hr>
+
+      <h2>Application Limitations</h2>
+      <p class="about-txt">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            This to-do-list application is free to use but absolutely no warranty
+        or guarantee is made about its performance, reliability, or security.
+
+        <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            While a user might copy the code and run the app locally, online users must be notified
+        that the application has no maintenance schedule and may without explanation one day disappear,
+        change, be modified/updated or otherwise suddenly fail.
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>Sean Fisher Copyright &copy; 2024</p>
+</footer>
+
+</body>
+</html>

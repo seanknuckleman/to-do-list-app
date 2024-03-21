@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Grouping</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icon.png">
+</head>
+
+<body onload="load_group()">
+<header>
+  <h1><a href="../index.html">To-Do List</a></h1>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="new_group.html">Create New Group</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="heading-container">
+    <label for="group-name" class="heading">Group Name: </label>
+    <input id="group-name" name="group-name" class="heading-name" form="newGroup" placeholder="Enter text here...">
+  </div>
+
+  <div class="content-container">
+    <div class="content-body">
+      <!--      SAVE  LOCAL STORAGE  HERE-->
+      <form id="newGroup" action="../index.html" method="get">
+        <div>
+          <label for="group-color">Choose a Tab Color: </label>
+          <span>
+            <input id="group-color" name="group-color" type="range" min="1" max="360" size="360" oninput="update_color_preview()">
+          </span>
+          <div id="color-display"></div>
+        </div>
+
+        <hr>
+        <label id="numOfTasks">Current Number of Completed Tasks: 0 / 0</label>
+        <div class="group-display-task-list">
+
+<!--          <div class="group-display-task">You Don't Have Any Tasks Yet...</div>-->
+<!--          <div class="group-display-task">Create a Grouping and Get to Work!</div>-->
+        </div>
+      </form>
+    </div>
+
+    <button class="save-btn" type="submit" form="newGroup" onclick="append_group()">Save</button>
+  </div>
+</main>
+
+<footer>
+  <p id="footer_here"></p>
+</footer>
+
+<script src="../js/storage.js"></script>
+</body>
+
+</html>

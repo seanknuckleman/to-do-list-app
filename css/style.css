@@ -1,0 +1,598 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ---------------- Native HTML Style Tags ---------------- */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  text-align: center;
+  /*margin-top: 25px;*/
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav li {
+  margin-right: 20px;
+}
+nav a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: rgba(140, 140, 200);;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+/* ---------------- Task/Group Content Containers ----------------*/
+/* ------- Content Container Heading ------- */
+.heading-container {
+  background-color: #156082;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+  justify-content: flex-start;
+  align-items: center;
+  height: 4.5em;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+.heading {
+  color: #f0f0f0;
+  margin-left: 120px;
+  font-size: 1.9em;
+  font-style: oblique;
+  width: fit-content;
+}
+.heading-name {
+  background-color: #f0f0f0;
+  margin-left: 20px;
+  padding-inline: 2em;
+  font-size: 1.4em;
+  text-align: center;
+  overflow-x: hidden;
+  width: clamp(200px, max-content, 60vw);
+}
+
+/* ------- Content Container Body ------- */
+.content-container {
+  background-color: #15608270;
+  border: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+  padding: 25px;
+}
+.content-body {
+  background-color: #f0f0f0;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  margin-bottom: 1.2em;
+  padding: 1.1em 1.5em;
+}
+
+
+/* ---------------- Index/Home Page ----------------*/
+/* ------- Groups Container ------- */
+#display-groups {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  gap: 10px;
+}
+.no-groups-warning {
+  color: indianred;
+  margin-inline: auto;
+  font-size: larger;
+  line-height: 2.7em;
+  text-align: center;
+  font-weight: bolder;
+  font-family: Century, "Arial Black", sans-serif;
+}
+#nav-new-group:hover {
+  /*color: #094d75;*/
+  opacity: 60%;
+}
+
+/* ------- Groups ------- */
+.grouping {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: flex-start;
+  margin: 3px;
+  padding: 5px;
+}
+.group-tab {
+  background-color: #4CAF50;
+  color: white;
+  border: #777777 2px solid;
+  border-bottom: #888888 1px solid;
+  border-radius: 15px 15px 0 0;
+  width: max-content;
+  height: 20px;
+  padding: 2px 20px;
+  font-family: Verdana, serif;
+}
+.group-tab span {
+  margin-right: 10px;
+}
+.group-tab button {
+  margin-right: 5px;
+}
+
+/* ------- Group Tasks ------- */
+.task-list {
+  width: 97%;
+}
+.group-task {
+  background-color: #eee;
+  border: #888888 3px solid;
+  width: 100%;
+  padding: 3px;
+  margin-bottom: 2px;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.group-task span {
+  width:  75%;
+  text-align: left;
+  text-wrap: none;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+/* ------- Image Buttons ------- */
+.btn-newTask {  /* (Group Tab Only) */
+  background-color: transparent;
+  background-image: url("https://cdn.pixabay.com/photo/2014/03/25/17/00/plus-297823_1280.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+  padding-top: 13px;
+  cursor: pointer;
+}
+.btn-editTask {
+  background-color: transparent;
+  background-image: url("https://cdn.pixabay.com/photo/2017/06/06/00/33/edit-icon-2375785_1280.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+.btn-deleteTask {
+  background-color: transparent;
+  background-image: url("https://cdn.pixabay.com/photo/2015/06/09/16/12/error-803716_1280.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding-top: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.btn-completeTask {   /* (Task List Only) */
+  background-color: transparent;
+  background-image: url("https://cdn.pixabay.com/photo/2016/10/10/01/49/hook-1727484_1280.png");
+  /*background-image: url("https://cdn.pixabay.com/photo/2017/01/13/01/22/ok-1976099_1280.png");*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+.btn-newTask:hover,
+.btn-editTask:hover,
+.btn-deleteTask:hover {
+  background-color: rgba(200, 200, 150, 0.3);
+}
+.btn-completeTask:hover {
+  background-color: rgba(200, 200, 150, 0.2);
+}
+
+/* ------- Blank Task ------- */
+.group-filler-task {
+  /*background-color: #eee;*/
+  /*background-color: blanchedalmond;*/
+  background-color: palegoldenrod;
+  border: #888888 3px solid;
+  width: 270px;
+  height: 21px;
+  padding: 3px;
+  margin-bottom: 2px;
+}
+.group-filler-task span {
+  width: 100%;
+}
+/* ---------------- About Page ----------------*/
+.about-body {
+  padding: 40px 100px 40px 100px;
+}
+.about-txt {
+  padding: 20px 50px;
+  font-size: medium;
+}
+
+/* ---------------- New/Edit Task Form Elements ----------------*/
+/* ------- Task Form ------- */
+#newTask {
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  display: flex;
+  flex-direction: row;
+}
+
+/* ------- Form Inputs ------- */
+/* ------- Task Form ------- */
+#new-task-label {
+  margin-left: auto;
+  width: max-content;
+  margin-right: 40px;
+  font-size: large;
+}
+#task-content {
+  background-color: #cccccc;
+  border: #156082 3px solid;
+  margin-right: auto;
+  resize: none;
+  font-size: large;
+  text-wrap: none;
+}
+
+/* ------- Save Button ------- */
+.save-btn {
+  background-color: white;
+  border: #094d75 8px solid;
+  margin-left: 78%;
+  padding: 8px 28px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.save-btn:hover {
+  border: #156082 8px solid;
+  color: rgba(140, 140, 200);
+}
+
+
+/* ---------------- New/Edit Group Page ----------------*/
+/* ------- Group Form ------- */
+#newGroup {
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------- Group Tab Color Preview ------- */
+#color-display {
+  background-color: #4CAF50;
+  border: black 2px solid;
+  border-radius: 4px;
+  width: 40px;
+  height: 25px;
+  margin-left: 80px;
+  display: inline-block;
+}
+
+/* ------- Group Color Slider Input (Form Input)------- */
+#group-color {
+  -webkit-transition: .2s;
+  -webkit-appearance: none;
+  background: #d3d3d3;
+  border-radius: 5px;
+  opacity: 0.7;
+  outline: none;
+  transition: opacity .2s;
+  width: 400px;
+  height: 15px;
+}
+#group-color::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #156082;
+  border-radius: 50%;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+#group-color::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #156082;
+  cursor: pointer;
+}
+#group-color:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* ------- Tasks List Display ------- */
+.group-display-task-list {
+  background-color: #156082;
+  border: white 2px solid;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px 15px 5px 15px;
+  align-items: center;
+  justify-content: center;
+}
+.group-display-task {
+  background-color: white;
+  color: #156082;
+  border-radius: 5px;
+  width: 98%;
+  margin-bottom: 10px;
+  margin-inline: auto;
+  padding: 5px;
+  text-align: center;
+  font-style: oblique;
+}
+.task-completed {
+  background-color: blanchedalmond;
+  color: #094d75;
+  font-style: normal;
+  text-decoration: line-through;
+  font-weight: bold;
+  text-shadow: #555555;
+}
+
+/* -------------- PHP Storm Styling Defaults ------------------- */
+
+/* A better looking default horizontal rule */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+  Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers:
+  https://github.com/h5bp/html5-boilerplate/issues/440
+*/
+audio, canvas,
+iframe, img,
+svg, video {
+  vertical-align: middle;
+}
+
+/* Remove default fieldset styles. */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Allow only vertical resizing of textareas. */
+textarea {
+  resize: vertical;
+}
+
+ /** Hide visually and from screen readers*/
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+  Extends the .visually-hidden class to allow the element
+   to be focusable when navigated to via the keyboard:
+   https://www.drupal.org/node/897638
+*/
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/* Hide visually and from screen readers, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+

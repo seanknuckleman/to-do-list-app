@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To-Do-List App</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body onload="display_groups()">
+<header>
+  <h1><a href="index.html">To-Do List</a></h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pages/new_group.html" id="nav-new-group">Create New Group</a></li>
+<!--      <li><a href="pages/new_task.html">CREATE NEW TASK</a></li>-->
+      <li><a href="pages/about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="heading-container">
+    <span class="heading">List Of Things To Do... </span>
+  </div>
+
+  <div class="content-container">
+    <div class="content-body">
+      <div id="display-groups">
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p id="footer_here"></p>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/storage.js"></script>
+
+</body>
+
+</html>
